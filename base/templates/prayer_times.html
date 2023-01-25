@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<style>
+  table{
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #f2f2f2;    
+    border: 2px solid #ffa600;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0px 0px 5px #ccc;
+  }
+ 
+  td{
+    padding:5px;
+    font-size: 30px;
+    padding-right: 45px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+  }
+  .namaz-cell{
+    text-align: left;
+  }
+  tr:hover {
+    background-color: #ddd;
+    transform: scale(1.05);
+  }
+  th{
+    font-size: 35px;
+    padding: 10px;
+    background-color: #ffa600;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+  }
+  th:hover {
+    cursor: pointer;
+    color: #f2f2f2;
+  }
+ </style>
+ 
+ <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+ <table>
+  <tr>
+    <th colspan="2">Prayer Times</th>
+  </tr>
+  {% for namaz in prayer_times %}
+  <tr>
+    <td class="namaz-cell" style="display: flex; align-items: center;"><img src="{%static 'images/islam.png' %}" width="40" height="40">{{namaz.name}}</td>
+    <td>{{namaz.time}}</td>
+  </tr>
+  {% endfor %}
+{% endblock %}
+
+

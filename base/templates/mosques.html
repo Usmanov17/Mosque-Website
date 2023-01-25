@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    table {
+        margin: auto; /* center the table */
+        border-collapse: separate; /* add space between cells */
+        border-spacing: 15px;
+        text-align: center; /* center text in cells */
+    }
+    caption {
+        font-size: larger;
+        text-align: center; /* center caption text */
+    }
+    th, td {
+        padding: 10px; /* add padding to cells */
+        border: 2px solid orange; /* add border to cells */
+    }
+    th {
+        background-color: orange; /* add background color to header cells */
+        color: white; /* change text color of header cells */
+    }
+</style>
+
+<table>
+    <caption style="color: orange; font-size: 30px;">Mosques & Islamic Centers in South Korea</caption>
+    <tr>
+        <th>Name</th>
+        <th>City</th>
+        <th>Address</th>
+        <th>Phone Number</th>
+    </tr>
+    {% for mosque in mosques %}
+    <tr>
+        <td>{{mosque.name}}</td>
+        <td>{{mosque.city}}</td>
+        <td>{{mosque.adress|safe}}</td>
+        <td>{{mosque.phone}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

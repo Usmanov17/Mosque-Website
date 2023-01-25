@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+
+header {
+  text-align: center;
+  font-size: 30px;
+  color: rgb(255, 128, 0);
+}
+
+header h1 {
+  margin: 0;
+}
+
+.navigation {
+  background-color: rgb(255, 140, 0);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  padding: 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+section h2 {
+  margin-top: 0;
+}
+
+section#photos {
+  text-align: center;
+}
+
+section#photos .photo-container {
+  display: flex;
+  justify-content: center;
+}
+
+section#photos .photo-container img {
+  height: 350px;
+  margin: 10px;
+}
+footer {
+  background-color: #f2f2f2;
+  padding: 10px;
+  text-align: center;
+}
+
+</style>
+<header>
+  <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-orange-500">Donate to Mosque</h1>
+</header>
+<nav class="navigation">
+  <ul>
+    <li><a href="#about-us" class="hover:text-orange-800">About Us</a></li>
+    
+    <li><a href="#different-ways-to-donate" class="hover:text-orange-800">Different Ways to Donate</a></li>
+  </ul>
+</nav>
+<main>
+  <section id="about-us">
+    <h2>About Us</h2>
+    <p>Welcome to Our Mosque! We are a community of believers who come together to worship and support each other. Your donations help us to maintain and improve our mosque, as well as support our community programs.</p>
+  </section>
+    <section id="photos">
+      <h2>Our Mosque</h2>
+      <div class="photo-container">
+          <img src="{% static 'images/inha.jpg' %}" alt="Mosque Photo 1">
+          <img src="{% static 'images/2.PNG' %}" alt="Mosque Photo 2">
+          <img src="{% static 'images/3.jpg' %}" alt="Mosque Photo 3">
+      </div>
+      <div class="photo-container">
+        <img src="{% static 'images/1.PNG' %}" alt="Mosque Photo 1">
+        <img src="{% static 'images/5.PNG' %}" alt="Mosque Photo 2">
+        <img src="{% static 'images/7.PNG' %}" alt="Mosque Photo 3">
+      </div>
+      <div class="photo-container">
+        <img src="{% static 'images/11.jpg' %}" alt="Mosque Photo 1">
+        <img src="{% static 'images/12.jpg' %}" alt="Mosque Photo 2">
+        <img src="{% static 'images/13.jpg' %}" alt="Mosque Photo 3">
+      </div>
+    </section>
+  <section id="different-ways-to-donate">
+      <h2>Different ways to Donate</h2>
+      <ul>
+          <li>Bank Transfer: Kookmin Bank, Account Number: 64680101486242</li>
+          <li>Cash donation: You can drop off cash donations at the mosque during prayer times.</li>
+          <li>Zakat: You can also donate your zakat to the mosque.</li>
+      </ul>
+  </section>
+</main>
+<footer>
+  <p>Copyright © 2023 Inha Mosque. All rights reserved.</p>
+</footer>
+{% endblock %}
+           
+

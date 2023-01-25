@@ -1,0 +1,26 @@
+{% load static %}
+<style>
+  .mr-10{
+    margin-right: 60px;
+  }
+</style>
+<header class="text-gray-600 body-font">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center text-orange-500 mb-4 md:mb-0">
+        <img class="w-20 h-20 p-1" alt="hero" src="{% static 'images/mosque-icon.png' %}">
+        <span class="text-xl">Inha Mosque</span>
+      </a>
+      <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+        <a href="{%url 'base:homepage'%}"  class="mr-10 text-orange-500  hover:text-orange-800">Home</a>
+        <a href="{%url 'base:prayer-times'%}" class="mr-10 text-orange-500  hover:text-orange-800">Prayer Times</a>
+        <a href="{%url 'base:info'%}" class="mr-10 text-orange-500  hover:text-orange-800">Info</a>
+        <a href="{%url 'base:products'%}" class="mr-10 text-orange-500  hover:text-orange-800">Products</a>
+        <a href="{%url 'base:notifications'%}" class="mr-10 text-orange-500  hover:text-orange-800">Notifications</a>
+        <a href="{%url 'base:donation'%}" class="mr-10 text-orange-500  hover:text-orange-800">Support Us</a>
+        <a href="{%url 'base:mosques'%}" class="mr-10 text-orange-500  hover:text-orange-800">Mosques</a>
+      </nav>
+    </div>
+</header>
+
+
+

@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block content %}
+<style type="text/css">
+	html, body{
+		height: 100%;
+	}
+
+	h1, p{
+		color: black;
+	}
+
+    #page-wrapper{
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+    }
+
+    #back-btn{
+	margin-top: 10px;
+	width: 100%;
+	border-radius: 5px;
+	margin: 2px;
+	padding: 6px 7px;
+	color: #fff;
+	background-color: rgb(7, 146, 14);
+
+    }
+
+    #success-box{
+	max-width: 800px;
+	height: auto;
+	background-color: #fff;
+	border:1px solid #888;
+	border-radius: 5px;
+	padding: 15px;
+	font-family: 'Lucida Console', monospace;
+    }
+	
+</style>
+
+<div id="page-wrapper">
+	<div id="success-box">
+        <h1> Thanks for reaching out! </h1>
+        <p>Your message was successfully sent! You will receive answer as soon as possible.</p>
+        <p> With regards Inha Masjid's Community.</p>
+		<a id="back-btn" href="{% url 'base:homepage' %}">BACK TO HOME PAGE</a>
+	</div>
+</div>
+
+{% endblock content %}
